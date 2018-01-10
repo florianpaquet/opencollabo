@@ -1,0 +1,89 @@
+html {
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+
+form {
+	margin: 0;
+}
+
+.button {
+	display: block;
+	margin-bottom: 0;
+}
+
+.scrollable {
+	overflow-y: auto;
+}
+
+.form-content {
+	display: block;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.form-content .content {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	border-bottom: 1px solid #EEE;
+}
+
+.form-content .left,
+.form-content .right,
+.denounce {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.form-content .left {
+	width: 300px;
+	background: #FAFAFA;
+	border-right: 1px solid #EEE;
+}
+
+.form-content .right {
+	flex-grow: 1;
+}
+
+.form-content .left > *:first-child,
+.form-content .right > *:first-child {
+	flex-grow: 1;
+}
+
+.form-content ul {
+	list-style: none;
+}
+
+.form-content ul {
+	list-style: none;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"] + label {
+	display: block;
+	cursor: pointer;
+	border-radius: 3px;
+	border: 1px solid #EEE;
+	padding: 10px 15px;
+}
+
+input[type="radio"]:checked + label {
+	background: #CFE3D3;
+	border-color: #7DAE87;
+}
+
+.denounce input[type="submit"] {
+	font-size: 1.5rem;
+}

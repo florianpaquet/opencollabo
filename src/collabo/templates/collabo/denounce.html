@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post" class="form-content">
+  {% csrf_token %}
+  <div class="content">
+    <div class="left">
+      <div class="scrollable">
+        {% for value, text in form.person.field.choices %}
+        <input id="person-{{ value }}" name="person" type="radio" value="{{ value }}">
+        <label for="person-{{ value }}">{{ text }}</label>
+        {% endfor %}
+      </div>
+      <div>
+        <a class="button" href="{% url 'add-person' %}">Add person</a>
+      </div>
+    </div>
+    <div class="right">
+      <div class="scrollable">
+        {% for value, text in form.sentence.field.choices %}
+        <input id="sentence-{{ value }}" name="sentence" type="radio" value="{{ value }}">
+        <label for="sentence-{{ value }}">{{ text }}</label>
+        {% endfor %}
+      </div>
+      <div>
+        <a class="button" href="{% url 'add-sentence' %}">Add sentence</a>
+      </div>
+    </div>
+  </div>
+  <div class="denounce">
+    <input class="button button-primary" type="submit" value="Denounce">
+  </div>
+</form>
+{% endblock %}
